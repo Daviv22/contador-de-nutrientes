@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Trabalho</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+    <h1 class="titulo1">Trabalho de Sistemas para Internet</h1>
+
+
+    <h2 class="titulo2">Alimentos</h2>
+    <!-- Aqui começa o painel de frutas -->
+
+    <h3 class="titulo3">Frutas</h3>
+
+    <div class="container">
+        
+        <div class="painel fruta">
+
+            <div class="cabecalho">
+                <img src="img/banana.jpg" alt="Banana">
+                <h4>Banana</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Banana">22.840</li>
+                <li id="prot_Banana">1.090</li>
+                <li id="gord_Banana">330</li>
+            </ul>    
+            <ul class="bloco2">
+                <li id="vita_Banana">B6, C</li>
+            </ul>
+
+            <div class="qtd">
+
+                <form>
+                    <input type="number" id="qtd_Banana" class="data" name="qtd_Banana" min="0" placeholder="Insira uma porção">
+                    <button id="Banana" type="button" class="botao" nome="Banana">Enviar</button>
+                </form>
+                
+            </div>
+
+        </div>
+
+        <div class="painel fruta">
+
+            <div class="cabecalho">
+                <img src="img/laranja.jpg" alt="Laranja">
+                <h4>Laranja</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Laranja">11.750</li>
+                <li id="prot_Laranja">940</li>
+                <li id="gord_Laranja">120</li>
+            </ul>    
+            <ul class="bloco2">
+                <li id="vita_Laranja">C, A</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Laranja" class="data" name="qtd_Laranja" min="0" placeholder="Insira uma porção">
+                    <button id="Laranja" type="button" class="botao" nome="Laranja">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+    <!-- Aqui começa o painel de grãos e derivados de cereais -->
+
+    <h3 class="titulo3">Derivados de Grãos e Cereais</h3>
+
+    <div class="container">
+
+        <div class="painel graos">
+
+            <div class="cabecalho">
+                <img src="img/arrozbranco.jpg" alt="Arroz Branco">
+                <h4>Arroz Branco</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Arroz">28.200</li>
+                <li id="prot_Arroz">2.700</li>
+                <li id="gord_Arroz">300</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Arroz" class="data" name="qtd_Arroz" min="0" placeholder="Insira uma porção">
+                    <button id="Arroz" type="button" class="botao" nome="Arroz">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="painel graos">
+
+            <div class="cabecalho">
+                <img src="img/paofrances.jpg" alt="Pão Francês">
+                <h4>Pão Francês</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Pao">50.000</li>
+                <li id="prot_Pao">9.000</li>
+                <li id="gord_Pao">2.500</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Pao" class="data" name="qtd_Pao" min="0" placeholder="Insira uma porção">
+                    <button id="Pao" type="button" nome="Pão Francês" class="botao">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="painel graos">
+
+            <div class="cabecalho">
+                <img src="img/feijao.jpg" alt="Feijão">
+                <h4>Feijão</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Feijao">20.000</li>
+                <li id="prot_Feijao">9.000</li>
+                <li id="gord_Feijao">500</li>
+            </ul>
+
+            <ul class="bloco2">
+                <li id="vita_Feijao">B9</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Feijao" class="data" name="qtd_feijao" min="0" placeholder="Insira uma porção">
+                    <button id="Feijao" type="button" class="botao" nome="Feijao">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="painel graos">
+
+            <div class="cabecalho">
+                <img src="img/cafe.jpg" alt="Café">
+                <h4>Café (sem açúcar)</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Cafe">0</li>
+                <li id="prot_Cafe">0</li>
+                <li id="gord_Cafe">0</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Cafe" class="data" name="qtd_Cafe" min="0" placeholder="Insira uma porção">
+                    <button id="Cafe" type="button" class="botao" nome="Café (Sem Açúcar)">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Aqui começa os produtos animais -->
+
+    <h3 class="titulo3">Produtos Animais</h3>
+
+    <div class="container">
+
+        <div class="painel animais">
+
+            <div class="cabecalho">
+                <img src="img/carnebovina.png" alt="Carne Bovina">
+                <h4>Carne Bovina</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Bovina">0</li>
+                <li id="prot_Bovina">26.000</li>
+                <li id="gord_Bovina">20.000</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Bovina" class="data" name="qtd_Bovina" min="0" placeholder="Insira uma porção">
+                    <button id="Bovina" type="button" class="botao" nome="Carne Bovina">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="painel animais">
+
+            <div class="cabecalho">
+                <img src="img/ovos.jpg" alt="Ovos">
+                <h4>Ovos</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Ovos">720</li>
+                <li id="prot_Ovos">13.000</li>
+                <li id="gord_Ovos">10.000</li>
+            </ul>
+
+            <ul class="bloco2">
+                <li id="vita_Ovos">B12, D</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Ovos" class="data" name="qtd_Ovos" min="0" placeholder="Insira uma porção">
+                    <button id="Ovos" type="button" class="botao" nome="Ovos">Enviar</button>
+                </form>
+            </div>
+
+        </div>          
+
+        <div class="painel animais">
+
+            <div class="cabecalho">
+                <img src="img/carnefrango.jpg" alt="Carne de Frango">
+                <h4>Carne de Frango</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Frango">0</li>
+                <li id="prot_Frango">31.000</li>
+                <li id="gord_Frango">3.600</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Frango" class="data" name="qtd_Frango" min="0" placeholder="Insira uma porção">
+                    <button id="Frango" type="button" class="botao" nome="Carne de Frango">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="painel animais">
+
+            <div class="cabecalho">
+                <img src="img/carnesuina.jpg" alt="Carne Suína">
+                <h4>Carne Suína</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Suina">0</li>
+                <li id="prot_Suina">29.000</li>
+                <li id="gord_Suina">10.000</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Suina" class="data" name="qtd_Suina" min="0" placeholder="Insira uma porção">
+                    <button id="Suina" type="button" class="botao" nome="Carne Suína">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Aqui começa o tubérculo -->
+
+    <h3 class="titulo3">Tubérculos e Raízes</h3>
+    
+    <div class="container">
+
+        <div class="painel tuberculos">
+
+            <div class="cabecalho">
+                <img src="img/batatabranca.jpg" alt="Batata Branca">
+                <h4>Batata Branca</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Batata">17.500</li>
+                <li id="prot_Batata">2.20</li>
+                <li id="gord_Batata">100</li>
+            </ul>
+
+            <ul class="bloco2">
+                <li id="vita_Batata">C</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Batata" class="data" name="qtd_Batata" min="0" placeholder="Insira uma porção">
+                    <button id="Batata" type="button" class="botao" nome="Batata Branca">Enviar</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <div class="painel tuberculos">
+
+            <div class="cabecalho">
+                <img src="img/cenoura.jpg" alt="Cenoura">
+                <h4>Cenoura</h4>
+            </div>
+
+            <ul class="bloco1">
+                <li id="carb_Cenoura">9.600</li>
+                <li id="prot_Cenoura">90</li>
+                <li id="gord_Cenoura">200</li>
+            </ul>
+
+            <ul class="bloco2">
+                <li id="vita_Cenoura">A, C</li>
+            </ul>
+
+            <div class="qtd">
+                <form>
+                    <input type="number" id="qtd_Cenoura" class="data" name="qtd_Cenoura" min="0" placeholder="Insira uma porção">
+                    <button id="Cenoura" type="button" class="botao" nome="Cenoura">Enviar</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <h2 class="titulo2">Gráficos</h2>
+
+    <h3 class="titulo3">Valores Energéticos</h3>
+
+    <div id="grafico-colunas"></div>
+
+    <h2 class="titulo3">Composição Nutricional</h2>
+
+    <div class="container">
+        <div class="painel_grafico" id="grafico_Banana"></div>
+        <div class="painel_grafico" id="grafico_Laranja"></div>
+        <div class="painel_grafico" id="grafico_Arroz"></div>
+        <div class="painel_grafico" id="grafico_Pao"></div>
+        <div class="painel_grafico" id="grafico_Feijao"></div>
+        <div class="painel_grafico" id="grafico_Cafe"></div>
+        <div class="painel_grafico" id="grafico_Bovina"></div>
+        <div class="painel_grafico" id="grafico_Ovos"></div>
+        <div class="painel_grafico" id="grafico_Frango"></div>
+        <div class="painel_grafico" id="grafico_Batata"></div>
+        <div class="painel_grafico" id="grafico_Cenoura"></div>
+        <div class="painel_grafico" id="grafico_Suina"></div>
+    </div>
+
+
+    <h2 class="titulo2">Refeições na Semana e Meta Diária</h2>
+
+    <h3 class="titulo3">Meta Diária</h3>
+
+    <div class="container" style="flex-direction: column;">
+        <div class="painel_grafico meta_grafico" id="meta_grafico" style="display: block;"></div>
+        <div class="container_meta">
+            <div id="meta_painel_botoes" class="painel1">
+                <div class="meta_group">
+                    <label for="meta_carb">Carboidratos</label>
+                    <input type="number" id="meta_carb" class="meta" name="meta_carb" min="0" placeholder="Em gramas">
+                </div>
+                <div class="meta_group">
+                    <label for="meta_prot">Proteínas</label>
+                    <input type="number" id="meta_prot" class="meta" name="meta_prot" min="0" placeholder="Em gramas">
+                </div>
+                <div class="meta_group">
+                    <label for="meta_gord">Gorduras</label>
+                    <input type="number" id="meta_gord" class="meta" name="meta_gord" min="0" placeholder="Em gramas">
+                </div>
+            </div>
+            <span class="meta_botao">
+                <input type="button" id="add_meta" name="Add" value="Adicionar Dia">
+            </span>
+        </div> 
+    </div>
+
+    <h3 class="titulo3">Refeições do Dia</h3>
+
+    <div class="container tabela1">
+
+        <div class="ptabela">
+            <table>
+                <tr>
+                    <th>Refeição</th>
+                    <th>Carboidratos</th>
+                    <th>Proteínas</th>
+                    <th>Gorduras</th>
+                    <th>Kilocalorias</th>
+                </tr>
+                <tr>
+                    <td>1ª</td>
+                    <td id="carb_1" class="nutri">0</td>
+                    <td id="prot_1" class="nutri">0</td>
+                    <td id="gord_1" class="nutri">0</td>
+                    <td id="kcal_1" class="energ">0</td>
+                </tr>
+                <tr>
+                    <td>2ª</td>
+                    <td id="carb_2" class="nutri">0</td>
+                    <td id="prot_2" class="nutri">0</td>
+                    <td id="gord_2" class="nutri">0</td>
+                    <td id="kcal_2" class="energ">0</td>
+                </tr>
+                <tr>
+                    <td>3ª</td>
+                    <td id="carb_3" class="nutri">0</td>
+                    <td id="prot_3" class="nutri">0</td>
+                    <td id="gord_3" class="nutri">0</td>
+                    <td id="kcal_3" class="energ">0</td>
+                </tr>
+                <tr>
+                    <td>4ª</td>
+                    <td id="carb_4" class="nutri">0</td>
+                    <td id="prot_4" class="nutri">0</td>
+                    <td id="gord_4" class="nutri">0</td>
+                    <td id="kcal_4" class="energ">0</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="carb_5" class="nutri">0</td>
+                    <td id="prot_5" class="nutri">0</td>
+                    <td id="gord_5" class="nutri">0</td>
+                    <td id="kcal_5" class="energ">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ptabela refeicao">
+            <div class="cabecalho2">
+                <h4>Insira sua Refeição</h4>
+            </div>
+            <div class="form_ref">
+                <form>
+                    <div class="ref1">
+                        <input type="radio" id="1ref" name="ref" value="1">
+                            <label for="1ref">1ª Refeição</label>
+                        <input type="radio" id="2ref" name="ref" value="2">
+                            <label for="2ref">2ª Refeição</label>
+                        <input type="radio" id="3ref" name="ref" value="3">
+                            <label for="3ref">3ª Refeição</label>
+                        <input type="radio" id="4ref" name="ref" value="4">
+                            <label for="4ref">4ª Refeição</label>
+                    </div><br>
+
+                    <div class="ref2">
+                        <label for="alimentos">Escolha um alimento:</label><br>
+                        <select id="alimentos">
+                            <option value="Banana">Banana</option>
+                            <option value="Laranja">Laranja</option>
+                            <option value="Arroz">Arroz</option>
+                            <option value="Pao">Pão Francês</option>
+                            <option value="Feijao">Feijão</option>
+                            <option value="Cafe">Café</option>
+                            <option value="Bovina">Carne Bovina</option>
+                            <option value="Ovos">Ovos</option>
+                            <option value="Frango">Frango</option>
+                            <option value="Suina">Carne Suína</option>
+                            <option value="Batata">Batata</option>
+                            <option value="Cenoura">Cenoura</option>
+                        </select> <br><br>
+                    </div>
+
+                    <div class="ref3">
+                        <label for="porcao">Escolha uma porção:</label>
+                        <input type="number" id="porcao" name="porcao" min="0" placeholder="Em porção">
+                    </div>
+
+                    <span class="ref4">
+                        <input type="button" id="enviar" name="enviar" value="Ok">
+                        <input type="button" id="limpar" name="limpar" value="Limpar">
+                        <input type="button" id="add_dia" name="add_dia" value="Adicionar Dia">
+                    </span>
+                </form>
+            </div>
+        </div>
+        <div class="painel_grafico" id="ref_grafico" style="display: block;"></div>
+    </div>
+
+    <h3 class="titulo3">Variação Percentual entre Meta Diária e Refeições</h3>
+
+    <div class="container" style="flex-direction: column; align-items: center;">
+        <div class="painel_grafico" id="porcent_grafico" style="display: block;"></div>
+        <span class="meta_botao" style="display: block;">
+            <input type="button" id="reset" name="reset" value="Resetar Gráficos">
+        </span>
+    </div>
+    
+
+    <div id="rodape"></div>
+
+
+ 
+    
+
+<script src="script.js"></script>
+</body>
+</html>

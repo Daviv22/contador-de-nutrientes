@@ -1,0 +1,363 @@
+body {
+    background-color: #f4f4f4;
+}
+
+            /*  --- Configura os painéis que disponibilzam os alimentos ---    */
+
+.container {
+    display: flex;  /* Torna os itens dentro do container flexíveis */
+    flex-wrap: wrap;    /* Permite quebra de linha */
+    justify-content: space-between; /* Os itens tem espaço igual entre eles */
+    padding: 20px;
+    gap: 20px;/* Espaço de 20px entre eles */
+}
+
+/* Ao passar o cursor or cima, o painel de cada alimento irá "flutuar" */
+.painel:hover {
+    transition: box-shadow 0.7s;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 0 7px #333;
+    transition: 0.4s;
+    transform: scale(1.001);
+}
+
+
+.painel {
+    background-color: #ffffff;
+    border: 1px  solid #ddd;
+    border-radius: 8px;
+    width: 48%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;     /* O padding e a border fazem parte do width e do height */
+}
+
+
+.painel ul {
+    list-style: none;   /* Remove as "bolinhas" das <li> */
+    float: left;
+}
+
+.bloco1 {
+    margin-left: 65px;  /* Deixa a lista alinhada com o título */
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+
+.painel .cabecalho {
+    display: flex;
+    align-items: center;    /* Alinha o cabeçalho com o resto do painel */
+    margin-bottom: 15px;
+}
+
+.painel img {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    margin-right: 15px;
+    object-fit: cover;  /* Garante que a imagem caiba no cabeçalho */
+}
+
+.cabecalho h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cabecalho h4 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+            /*  --- Configura os títulos ---    */
+
+/* Centralizar e estilizar o título */
+.titulo3,
+.titulo2 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 32px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    position: relative; /* Necessário para posicionar o underline */
+}
+
+            /* Underline */
+
+.titulo3::after,
+.titulo2::before {
+    content: ""; /* Cria um elemento vazio */
+    display: block; /* Faz com que o elemento ocupe espaço */
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.titulo1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    background-color: #333;
+    border: 5px solid #333;
+    padding: 5px;
+    background-clip: content-box; /* Garante que haja um espaço entre a border e o padding */
+    width: 50%;
+    margin: 0 auto 150px;
+}
+
+
+            /*  --- Configura a área de input ---    */
+
+.qtd button {
+    background-image: url(img/file.png);
+    background-color: inherit;
+    object-fit: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+    border: none;
+    height: 20px;
+    width: 20px;
+    text-indent: -99999px; /* Joga o texto do button bem longe, deixando ele invisível */
+    cursor: pointer;        /* Faz com que o cursor se altere ao passar por cima */
+}
+
+.qtd input[type=number] {
+    width: 170px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.painel .qtd{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+            /*  --- Adiciona o nome do nutriente e a massa em mg ---    */
+
+
+.bloco1 li:nth-child(1)::before {
+    content: 'Carboidratos: ';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.bloco1 li:nth-child(2)::before {
+    content: "Proteínas: ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.bloco1 li:nth-child(3)::before {
+    content: "Gorduras: ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.bloco2 li:first-child::before {
+    content: "Vitaminas: ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.bloco1 li:nth-child(-n+3)::after {
+    content: " mg";
+}
+
+.painel_grafico {
+    width: 600px; 
+    height: 400px; 
+    margin: 20px auto; 
+    display: none;
+}
+
+            /*  --- Configura o estilo da tabela ---    */
+
+table {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+th, td {
+    background-color: lightblue;
+}
+
+.nutri::after {
+    content: ' g';
+}
+
+.energ::after {
+    content: ' kcal';
+}
+
+.ptabela {
+    background-color: #ffffff;
+    border: 1px  solid #ddd;
+    border-radius: 8px;
+    width: 48%;
+    padding: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+            /*  --- Configura o painel que adiciona refeições ---    */
+
+.refeicao h4 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.refeicao {
+    display: flex;
+    justify-content: center;    /* Alinha os itens no centro */
+    align-items: center;        /* Alinha os itens na vertical */
+    padding: 20px;
+}
+
+.cabecalho2 {
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.ref3 input[type=number] {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 80px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.ref2 select {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100px;
+    padding: 10px;
+}
+
+.ref1,
+.ref2,
+.ref3,
+.ref4 {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ref4 input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 33%;
+    height: 30px;
+    background-color: lightblue;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#enviar,
+#limpar {
+    margin: 5px 10px;
+}
+
+            /*  --- Configura o container da meta diária ---    */
+
+.container_meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px  solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    width: 600px;
+    height: 100%;
+    contain: content;
+    margin: 0 auto;
+}
+
+.painel1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;    /* Os itens são colocados em linha */
+    gap: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.meta_group {
+    display: flex;
+    flex-direction: column; /* Os itens são colocados em coluna */
+    align-items: center;
+}
+
+.painel1 input[type=number] {
+    margin: 10px 5px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+
+.meta_botao input,
+#reset input {
+    align-items: center; /* Centraliza o botão */
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 9px;
+    padding: 9px;
+}
+
+            /*  --- Configura a área do gráfico percentual ---    */
+
+.variacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+            /*  --- Configura o rodapé ---    */
+
+#rodape {
+    content: ' ';
+    display: block;
+    background-color: #333;
+    width: 100%;
+    height: 100px;
+    margin-top: 80px;
+    background-clip: content-box;
+    padding: 5px;
+    border: 5px solid #333;
+    box-sizing: border-box;
+}
