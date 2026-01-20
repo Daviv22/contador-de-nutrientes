@@ -145,6 +145,11 @@ function renderizarCards(listaAlimentos) {
         const categoria = alimento.categoria
         const container = grids[categoria]
 
+        if (!container) {
+            console.error(`Container não encontrado para categoria: ${categoria}`)
+            return
+        }
+
         const card = criarCardAlimento(alimento)
         container.appendChild(card)
 
