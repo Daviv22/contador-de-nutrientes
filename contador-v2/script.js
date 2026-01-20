@@ -1,27 +1,3 @@
-const banana = {
-    id: 'banana',
-    nome: 'Banana',
-    categoria: 'frutas',
-    imagem: './img/banana.jpg',
-    nutrientes: {
-        carboidratos: 22.84,
-        gorduras: 0.33,
-        proteinas: 1.09
-    }
-}
-
-const laranja = {
-    id: 'laranja',
-    nome: 'Laranja',
-    categoria: 'frutas',
-    imagem: './img/laranja.jpg',
-    nutrientes: {
-        carboidratos: 11.750,
-        gorduras: 120,
-        proteinas: 940
-    }
-}
-
 const alimentos = [banana, laranja]
 
 function criarCardAlimentoHeader (alimento) {
