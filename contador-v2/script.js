@@ -88,7 +88,30 @@ function criarCardAlimentoBody (alimento) {
 }
 
 function criarCardAlimentoFooter () {
+    const footer = document.createElement('div')
+    footer.classList.add('card-footer')
 
+    const form = document.createElement('form')
+    form.classList.add('alimento-form')
+
+    const input = document.createElement('input')
+    input.type = 'number'
+    input.classList.add('input-porcao')
+    input.placeholder = 'Porções'
+    input.min = 0
+    input.step = 1
+    input.setAttribute(
+        'aria-label',
+        `Quantidade de porções de ${alimento.nome}`
+    )
+
+    const button = document.createElement('button')
+    button.type = 'submit'
+    button.classList.add('btn-adicionar')
+    button.textContent = 'Adicionar'
+
+    form.append(input, button)
+    footer.appendChild(form)
 }
 
 function criarCardAlimento(alimento) {
