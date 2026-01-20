@@ -47,7 +47,43 @@ function criarCardAlimentoHeader () {
     return header
 }
 
-function criarCardAlimentoBody () {
+function criarCardAlimentoBody (alimento) {
+
+    const body = document.createElement('div')
+    body.classList.add('card-body')
+
+    const dl = document.createElement('dl')
+    dl.classList.add('info-nutricional')
+
+    const nutrientes = [
+        ['Carboidratos', alimento.nutrientes.carboidratos, 'carboidratos'],
+        ['Proteínas', alimento.nutrientes.proteinas, 'proteinas'],
+        ['Gorduras', alimento.nutrientes.gorduras, 'gorduras']
+    ]
+
+    nutrientes.forEach(([label, valor, dataAttr]) => {
+        const item = document.createElement('div')
+        item.classList.add('nutriente-item')
+
+        const dt = document.createElement('dt')
+        dt.classList.add('nutriente-label')
+        dt.textContent = label
+
+        const dd = document.createElement('dd')
+        dd.classList.add('nutriente-valor')
+
+        const span = document.createElement('span')
+        span.dataset.nutriente = dataAttr
+        span.textContent = valor
+
+        dd.append(span, 'g')
+        item.append(dt, dd)
+        dl.appendChild(item)
+    })
+
+    body.appendChild(dl)
+
+    return body
 
 }
 
