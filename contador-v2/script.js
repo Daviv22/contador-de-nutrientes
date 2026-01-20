@@ -98,7 +98,7 @@ function criarCardAlimentoFooter (alimento) {
     input.type = 'number'
     input.classList.add('input-porcao')
     input.placeholder = 'Porções'
-    input.min = 0
+    input.min = '0'
     input.step = '1'
     input.setAttribute(
         'aria-label',
