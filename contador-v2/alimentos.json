@@ -1,0 +1,134 @@
+[
+  {
+    "id": "banana",
+    "nome": "Banana",
+    "categoria": "frutas",
+    "imagem": "./img/banana.jpg",
+    "nutrientes": {
+      "carboidratos": 22840,
+      "gorduras": 330,
+      "proteinas": 1090
+    }
+  },
+  {
+    "id": "laranja",
+    "nome": "Laranja",
+    "categoria": "frutas",
+    "imagem": "./img/laranja.jpg",
+    "nutrientes":{
+      "carboidratos": 11750,
+      "gorduras": 120,
+      "proteinas": 940
+    }
+  },
+  {
+    "id": "arroz-branco",
+    "nome": "Arroz Branco",
+    "categoria": "graos",
+    "imagem": "arrozbranco./img/.jpg",
+    "nutrientes": {
+      "carboidratos": 28200,
+      "gorduras": 2700,
+      "proteinas": 300
+    }
+  },
+  {
+    "id": "pao-frances",
+    "nome": "Pão Francês",
+    "categoria": "graos",
+    "imagem": "./img/paofrances.jpg",
+    "nutrientes": {
+      "carboidratos": 50000,
+      "gorduras": 2500,
+      "proteinas": 9000
+    }
+  },
+  {
+    "id": "feijao",
+    "nome": "Feijão",
+    "categoria": "graos",
+    "imagem": "./img/feijao.jpg",
+    "nutrientes": {
+      "carboidratos": 20000,
+      "gorduras": 500,
+      "proteinas": 9000
+    }
+  },
+  {
+    "id": "cafe",
+    "nome": "Café (sem açúcar)",
+    "categoria": "graos",
+    "imagem": "./img/cafe.jpg",
+    "nutrientes": {
+      "carboidratos": 0,
+      "gorduras": 0,
+      "proteinas": 0
+    }
+  },
+  {
+    "id": "carne-bovina",
+    "nome": "Carne Bovina",
+    "categoria": "animais",
+    "imagem": "./img/carnebovina.jpg",
+    "nutrientes": {
+      "carboidratos": 0,
+      "gorduras": 20000,
+      "proteinas": 26000
+    }
+  },
+  {
+    "id": "ovos",
+    "nome": "Ovos",
+    "categoria": "animais",
+    "imagem": "./img/ovos.jpg",
+    "nutrientes": {
+      "carboidratos": 720,
+      "gorduras": 10000,
+      "proteinas": 13000
+    }
+  },
+  {
+    "id": "carne-de-frango",
+    "nome": "Carne de Frango",
+    "categoria": "animais",
+    "imagem": "./img/carnedefrango.jpg",
+    "nutrientes": {
+      "carboidratos": 0,
+      "gorduras": 3600,
+      "proteinas": 31000
+    }
+  },
+  {
+    "id": "carne-suina",
+    "nome": "Carne Suína",
+    "categoria": "animais",
+    "imagem": "./img/carnesuina.jpg",
+    "nutrientes": {
+      "carboidratos": 0,
+      "gorduras": 10000,
+      "proteinas": 29000
+    }
+  },
+  {
+    "id": "batata",
+    "nome": "Batata Branca",
+    "categoria": "tuberculos",
+    "imagem": "./img/batata.jpg",
+    "nutrientes": {
+      "carboidratos": 17500,
+      "gorduras": 100,
+      "proteinas": 2.20
+    }
+  },
+  {
+    "id": "cenoura",
+    "nome": "Cenoura",
+    "categoria": "tuberculos",
+    "imagem": "./img/cenoura.jpg",
+    "nutrientes": {
+      "carboidratos": 9600,
+      "gorduras": 200,
+      "proteinas": 90
+    }
+  }
+]
