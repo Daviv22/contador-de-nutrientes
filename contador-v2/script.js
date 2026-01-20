@@ -112,6 +112,8 @@ function criarCardAlimentoFooter () {
 
     form.append(input, button)
     footer.appendChild(form)
+
+    return footer
 }
 
 function criarCardAlimento(alimento) {
