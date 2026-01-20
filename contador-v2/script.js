@@ -33,19 +33,20 @@ function criarCardAlimento(alimento) {
 
 }
 
-function renderTeste(alimento) {
-    const teste = criarCardAlimento(banana)
-
-    const grid = {
-        frutas: document.getElementById('grid-frutas'),
-    }
-    const categoria = alimento.categoria
-    const container = grid[categoria]
-
-
-
-
-    container.appendChild(teste)
+const grid = {
+    frutas: document.getElementById('grid-frutas'),
 }
 
-renderTeste(banana)
+function renderizarCards(listaAlimentos) {
+    listaAlimentos.forEach(alimento => {
+        const categoria = alimento.categoria
+        const container = grid[categoria]
+
+        const card = criarCardAlimento(alimento)
+        container.appendChild(card)
+
+    })
+
+}
+
+renderizarCards(alimentos)
