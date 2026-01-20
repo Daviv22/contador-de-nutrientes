@@ -13,7 +13,7 @@ const banana = {
 const laranja = {
     id: 'laranja',
     nome: 'Laranja',
-    categoria: 'Frutas',
+    categoria: 'frutas',
     imagem: './img/laranja.jpg',
     nutrientes: {
         carb: 11.750,
