@@ -1,7 +1,7 @@
 const banana = {
     id: 'banana',
     nome: 'Banana',
-    categoria: 'Frutas',
+    categoria: 'frutas',
     imagem: './img/banana.jpg',
     nutrientes: {
         carb: 22.84,
@@ -22,4 +22,14 @@ const laranja = {
     }
 }
 
-const aliemntos = [banana]
+const alimentos = [banana, laranja]
+
+function criarCardAlimento(alimento) {
+    const img = document.createElement('img')
+    img.src = alimento.imagem
+    img.alt = alimento.nome
+    img.classList.add('alimento-img')
+    return img
+
+}
+
