@@ -127,7 +127,9 @@ function criarCardAlimento(alimento) {
     const body = criarCardAlimentoBody(alimento)
     const footer = criarCardAlimentoFooter(alimento)
 
-
+    // Montando o card
+    article.append(header, body, footer)
+    return article
 
 }
 
