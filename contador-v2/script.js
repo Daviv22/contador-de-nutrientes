@@ -9,3 +9,5 @@ const banana = {
         prot: 1.09
     }
 }
+
+const aliemntos = [banana]
