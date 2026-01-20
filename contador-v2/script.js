@@ -33,3 +33,19 @@ function criarCardAlimento(alimento) {
 
 }
 
+function renderTeste(alimento) {
+    const teste = criarCardAlimento(banana)
+
+    const grid = {
+        frutas: document.getElementById('grid-frutas'),
+    }
+    const categoria = alimento.categoria
+    const container = grid[categoria]
+
+
+
+
+    container.appendChild(teste)
+}
+
+renderTeste(banana)
