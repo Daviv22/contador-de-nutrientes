@@ -24,6 +24,18 @@ const laranja = {
 
 const alimentos = [banana, laranja]
 
+function criarCardAlimentoHeader () {
+
+}
+
+function criarCardAlimentoBody () {
+
+}
+
+function criarCardAlimentoFooter () {
+
+}
+
 function criarCardAlimento(alimento) {
     const img = document.createElement('img')
     img.src = alimento.imagem
