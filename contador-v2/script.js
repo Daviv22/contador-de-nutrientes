@@ -26,6 +26,25 @@ const alimentos = [banana, laranja]
 
 function criarCardAlimentoHeader () {
 
+    const header = document.createElement('div');
+    header.classList.add('card-header');
+
+    const figure = document.createElement('figure');
+    figure.classList.add('alimento-figura');
+
+    const img = document.createElement('img')
+    img.src = alimento.imagem
+    img.alt = alimento.nome
+    img.classList.add('alimento-img')
+
+    const nome = document.createElement('h4');
+    nome.classList.add('alimento-nome');
+    nome.textContent = alimento.nome
+
+    figure.appendChild(img)
+    header.append(figure, nome)
+
+    return header
 }
 
 function criarCardAlimentoBody () {
@@ -43,13 +62,11 @@ function criarCardAlimento(alimento) {
     article.dataset.alimentoId = alimento.id
     article.dataset.categoria = alimento.categoria
 
+    const header = criarCardAlimentoHeader(alimento)
+    const body = criarCardAlimentoBody(alimento)
+    const footer = criarCardAlimentoFooter(alimento)
 
 
-    const img = document.createElement('img')
-    img.src = alimento.imagem
-    img.alt = alimento.nome
-    img.classList.add('alimento-img')
-    return img
 
 }
 
