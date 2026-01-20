@@ -4,9 +4,9 @@ const banana = {
     categoria: 'frutas',
     imagem: './img/banana.jpg',
     nutrientes: {
-        carb: 22.84,
-        gord: 0.33,
-        prot: 1.09
+        carboidratos: 22.84,
+        gorduras: 0.33,
+        proteinas: 1.09
     }
 }
 
@@ -16,9 +16,9 @@ const laranja = {
     categoria: 'frutas',
     imagem: './img/laranja.jpg',
     nutrientes: {
-        carb: 11.750,
-        gord: 120,
-        prot: 940
+        carboidratos: 11.750,
+        gorduras: 120,
+        proteinas: 940
     }
 }
 
