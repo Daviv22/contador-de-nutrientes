@@ -24,7 +24,7 @@ const laranja = {
 
 const alimentos = [banana, laranja]
 
-function criarCardAlimentoHeader () {
+function criarCardAlimentoHeader (alimento) {
 
     const header = document.createElement('div');
     header.classList.add('card-header');
@@ -87,7 +87,7 @@ function criarCardAlimentoBody (alimento) {
 
 }
 
-function criarCardAlimentoFooter () {
+function criarCardAlimentoFooter (alimento) {
     const footer = document.createElement('div')
     footer.classList.add('card-footer')
 
