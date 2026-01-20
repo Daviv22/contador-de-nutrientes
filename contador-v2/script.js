@@ -37,6 +37,14 @@ function criarCardAlimentoFooter () {
 }
 
 function criarCardAlimento(alimento) {
+
+    const article = document.createElement('article');
+    article.classList.add('alimento-card')
+    article.dataset.alimentoId = alimento.id
+    article.dataset.categoria = alimento.categoria
+
+
+
     const img = document.createElement('img')
     img.src = alimento.imagem
     img.alt = alimento.nome
