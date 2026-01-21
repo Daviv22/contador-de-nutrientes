@@ -27,5 +27,11 @@ function renderizarCards(listaAlimentos) {
         container.appendChild(card)
 
     })
-
 }
+
+async function inicializar() {
+    const alimentos = carregarAlimentos()
+    renderizarCards(alimentos)
+}
+
+document.addEventListener('DOMContentLoaded', inicializar)
