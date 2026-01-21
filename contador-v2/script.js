@@ -1,5 +1,11 @@
 import { criarCardAlimento } from "./js/cardBuilder";
 
+async function carregarAlimentos() {
+    const response = await fetch('./js/alimentos');
+    const data = await response.json();
+    return data;
+}
+
 const grids = {
     frutas: document.getElementById('grid-frutas'),
     animais: document.getElementById('grid-animais'),
@@ -23,5 +29,3 @@ function renderizarCards(listaAlimentos) {
     })
 
 }
-
-renderizarCards(alimentos)
