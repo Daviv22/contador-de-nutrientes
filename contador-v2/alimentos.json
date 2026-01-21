@@ -25,7 +25,7 @@
     "id": "arroz-branco",
     "nome": "Arroz Branco",
     "categoria": "graos",
-    "imagem": "arrozbranco./img/.jpg",
+    "imagem": "./img/arrozbranco.jpg",
     "nutrientes": {
       "carboidratos": 28200,
       "gorduras": 2700,
@@ -69,7 +69,7 @@
     "id": "carne-bovina",
     "nome": "Carne Bovina",
     "categoria": "animais",
-    "imagem": "./img/carnebovina.jpg",
+    "imagem": "./img/carnebovina.png",
     "nutrientes": {
       "carboidratos": 0,
       "gorduras": 20000,
@@ -91,7 +91,7 @@
     "id": "carne-de-frango",
     "nome": "Carne de Frango",
     "categoria": "animais",
-    "imagem": "./img/carnedefrango.jpg",
+    "imagem": "./img/carnefrango.jpg",
     "nutrientes": {
       "carboidratos": 0,
       "gorduras": 3600,
@@ -113,7 +113,7 @@
     "id": "batata",
     "nome": "Batata Branca",
     "categoria": "tuberculos",
-    "imagem": "./img/batata.jpg",
+    "imagem": "./img/batatabranca.jpg",
     "nutrientes": {
       "carboidratos": 17500,
       "gorduras": 100,
