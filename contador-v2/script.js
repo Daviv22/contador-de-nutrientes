@@ -1,3 +1,5 @@
+import { criarCardAlimento } from "./js/cardBuilder";
+
 const grids = {
     frutas: document.getElementById('grid-frutas'),
     animais: document.getElementById('grid-animais'),
