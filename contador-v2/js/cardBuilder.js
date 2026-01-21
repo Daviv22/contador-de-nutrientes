@@ -93,7 +93,7 @@ function criarCardAlimentoFooter (alimento) {
 export function criarCardAlimento(alimento) {
 
     const article = document.createElement('article');
-    article.classList.add('alimento-card')
+    article.classList.add('alimento-card', 'card', 'h-100', 'shadow-sm', 'hover-shadow-lg', 'transition')
     article.dataset.alimentoId = alimento.id
     article.dataset.categoria = alimento.categoria
 
