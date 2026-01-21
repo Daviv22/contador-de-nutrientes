@@ -90,7 +90,7 @@ function criarCardAlimentoFooter (alimento) {
     return footer
 }
 
-function criarCardAlimento(alimento) {
+export function criarCardAlimento(alimento) {
 
     const article = document.createElement('article');
     article.classList.add('alimento-card')
