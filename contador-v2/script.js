@@ -1,7 +1,7 @@
-import { criarCardAlimento } from "./js/cardBuilder";
+import { criarCardAlimento } from "./js/cardBuilder.js";
 
 async function carregarAlimentos() {
-    const response = await fetch('./js/alimentos');
+    const response = await fetch('./alimentos.json');
     const data = await response.json();
     return data;
 }
@@ -30,7 +30,7 @@ function renderizarCards(listaAlimentos) {
 }
 
 async function inicializar() {
-    const alimentos = carregarAlimentos()
+    const alimentos = await carregarAlimentos()
     renderizarCards(alimentos)
 }
 
