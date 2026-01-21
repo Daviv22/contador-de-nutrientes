@@ -28,7 +28,7 @@ function renderizarCards(listaAlimentos) {
 
         const card = criarCardAlimento(alimento)
         col.appendChild(card)
-        container.appendChild(card)
+        container.appendChild(col)
 
     })
 }
