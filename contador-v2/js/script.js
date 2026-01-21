@@ -1,4 +1,4 @@
-import { criarCardAlimento } from "./js/cardBuilder.js";
+import { criarCardAlimento } from "./cardBuilder.js";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
