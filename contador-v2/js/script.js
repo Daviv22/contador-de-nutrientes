@@ -23,7 +23,11 @@ function renderizarCards(listaAlimentos) {
             return
         }
 
+        const col = document.createElement('div');
+        col.className = 'col';
+
         const card = criarCardAlimento(alimento)
+        col.appendChild(card)
         container.appendChild(card)
 
     })
