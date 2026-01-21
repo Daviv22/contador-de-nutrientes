@@ -1,18 +1,18 @@
 function criarCardAlimentoHeader (alimento) {
 
     const header = document.createElement('div');
-    header.classList.add('card-header');
+    header.classList.add('card-header', 'bg-light', 'text-center', 'p-3');
 
     const figure = document.createElement('figure');
-    figure.classList.add('alimento-figura');
+    figure.classList.add('alimento-figura', 'mb-3');
 
     const img = document.createElement('img')
     img.src = alimento.imagem
     img.alt = alimento.nome
-    img.classList.add('alimento-img')
+    img.classList.add('alimento-img', 'card-img-top', 'rounded')
 
     const nome = document.createElement('h4');
-    nome.classList.add('alimento-nome');
+    nome.classList.add('alimento-nome', 'card-title', 'mb-0', 'fw-bold');
     nome.textContent = alimento.nome
 
     figure.appendChild(img)
@@ -27,7 +27,7 @@ function criarCardAlimentoBody (alimento) {
     body.classList.add('card-body')
 
     const dl = document.createElement('dl')
-    dl.classList.add('info-nutricional')
+    dl.classList.add('info-nutricional', 'mb-0')
 
     const nutrientes = [
         ['Carboidratos', alimento.nutrientes.carboidratos, 'carboidratos'],
@@ -63,14 +63,14 @@ function criarCardAlimentoBody (alimento) {
 
 function criarCardAlimentoFooter (alimento) {
     const footer = document.createElement('div')
-    footer.classList.add('card-footer')
+    footer.classList.add('card-footer', 'bg-white')
 
     const form = document.createElement('form')
-    form.classList.add('alimento-form')
+    form.classList.add('alimento-form', 'd-flex', 'gap-2')
 
     const input = document.createElement('input')
     input.type = 'number'
-    input.classList.add('input-porcao')
+    input.classList.add('input-porcao', 'form-control')
     input.placeholder = 'Porções'
     input.min = '0'
     input.step = '1'
@@ -81,7 +81,7 @@ function criarCardAlimentoFooter (alimento) {
 
     const button = document.createElement('button')
     button.type = 'submit'
-    button.classList.add('btn-adicionar')
+    button.classList.add('btn-adicionar', 'btn', 'btn-primary')
     button.textContent = 'Adicionar'
 
     form.append(input, button)
