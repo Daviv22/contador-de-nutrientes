@@ -80,7 +80,7 @@ function criarCardAlimentoFooter (alimento) {
     )
 
     const button = document.createElement('button')
-    button.type = 'submit'
+    button.type = 'button'
     button.classList.add('btn-adicionar', 'btn', 'btn-primary')
     button.textContent = 'Adicionar'
 
