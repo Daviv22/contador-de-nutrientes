@@ -1,15 +1,15 @@
 export function pegarPorcao(alimento, quantidade) {
-    console.log({
-        alimentoId: alimento.id,
-        alimentoNome: alimento.nome,
-        quantidade: quantidade
-    })
+    calcularKcal(alimento, quantidade)
 }
 
 function calcularKcal(alimento, porcao) {
-    const carb = alimento.nutriente.carboidratos * porcao;
-    const prot = alimento.nutriente.proteinas * porcao;
-    const gord = alimento.nutriente.gorduras * porcao;
+    const carb = alimento.nutrientes.carboidratos * porcao;
+    const prot = alimento.nutrientes.proteinas * porcao;
+    const gord = alimento.nutrientes.gorduras * porcao;
 
     return carb * 4 + prot * 4 + gord * 9;
+}
+
+function atualizarGraficoKcal() {
+
 }
