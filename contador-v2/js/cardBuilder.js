@@ -1,3 +1,5 @@
+import {pegarPorcao} from "./graphics.js";
+
 function criarCardAlimentoHeader (alimento) {
 
     const header = document.createElement('div');
@@ -83,6 +85,12 @@ function criarCardAlimentoFooter (alimento) {
     button.type = 'button'
     button.classList.add('btn-adicionar', 'btn', 'btn-primary')
     button.textContent = 'Adicionar'
+
+    button.addEventListener('click', () => {
+        const quantidade = Number(input.value);
+
+        pegarPorcao(alimento, quantidade)
+    });
 
     form.append(input, button)
     footer.appendChild(form)
