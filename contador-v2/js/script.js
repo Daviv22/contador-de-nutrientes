@@ -34,10 +34,10 @@ function renderizarCards(listaAlimentos) {
 }
 
 async function inicializar() {
-    const alimentos = await carregarAlimentos()
-    renderizarCards(alimentos)
+    const alimentos = await carregarAlimentos();
+    renderizarCards(alimentos);
 
-    criarGraficoKcal()
+    criarGraficoKcal();
 }
 
 document.addEventListener('DOMContentLoaded', inicializar)
