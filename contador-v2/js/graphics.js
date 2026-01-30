@@ -1,3 +1,5 @@
+let chartKcal;
+
 function calcularKcal(alimento, porcao) {
     const carb = alimento.nutrientes.carboidratos * porcao;
     const prot = alimento.nutrientes.proteinas * porcao;
@@ -6,10 +8,8 @@ function calcularKcal(alimento, porcao) {
     return carb * 4 + prot * 4 + gord * 9;
 }
 
-export function atualizarGraficoKcal(alimento, porcao) {
-    const kcal = calcularKcal(alimento, porcao);
-
-    let chart = Highcharts.chart('grafico-colunas', {
+export function criarGraficoKcal() {
+    chartKcal = Highcharts.chart('grafico-colunas', {
         chart: {
             type: 'column'
         },
@@ -24,5 +24,9 @@ export function atualizarGraficoKcal(alimento, porcao) {
             data: []
         }]
     });
+}
+
+export function atualizarGraficoKcal(alimento, porcao) {
+    const kcal = calcularKcal(alimento, porcao);
 
 }
