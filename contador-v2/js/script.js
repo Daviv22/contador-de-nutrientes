@@ -2,8 +2,7 @@ import { criarCardAlimento } from "./cardBuilder.js";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
-    const data = await response.json();
-    return data;
+    return await response.json();
 }
 
 const grids = {
