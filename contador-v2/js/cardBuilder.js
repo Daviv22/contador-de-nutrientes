@@ -1,4 +1,4 @@
-import {pegarPorcao} from "./graphics.js";
+import {atualizarGraficoKcal} from "./graphics.js";
 
 function criarCardAlimentoHeader (alimento) {
 
@@ -89,7 +89,7 @@ function criarCardAlimentoFooter (alimento) {
     button.addEventListener('click', () => {
         const quantidade = Number(input.value);
 
-        pegarPorcao(alimento, quantidade)
+        atualizarGraficoKcal(alimento, quantidade)
     });
 
     form.append(input, button)
