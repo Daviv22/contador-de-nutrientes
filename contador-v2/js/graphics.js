@@ -29,4 +29,6 @@ export function criarGraficoKcal() {
 export function atualizarGraficoKcal(alimento, porcao) {
     const kcal = calcularKcal(alimento, porcao);
 
+    chartKcal.xAxis[0].categories.push(alimento.nome)
+    chartKcal.series[0].addPoint(kcal)
 }
