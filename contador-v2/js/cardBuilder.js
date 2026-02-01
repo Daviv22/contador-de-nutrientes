@@ -17,6 +17,24 @@ function criarCardAlimentoHeader (alimento) {
     graficoContainer.classList.add('grafico-pizza-container');
     graficoContainer.id = `grafico-pizza-${alimento.id}`;
 
+    figure.addEventListener('mouseenter', () => {
+        img.style.opacity = '0';
+        graficoContainer.style.opacity = '1';
+        graficoContainer.style.pointerEvents = 'all';
+
+        if (!graficoContainer.dataset.graficoCarregado) {
+            criarGraficoPizza(alimento, graficoContainer.id);
+            graficoContainer.dataset.graficoCarregado = 'true';
+        }
+    });
+
+    figure.addEventListener('mouseleave', () => {
+        // Esconder gráfico, mostrar imagem
+        img.style.opacity = '1';
+        graficoContainer.style.opacity = '0';
+        graficoContainer.style.pointerEvents = 'none';
+    });
+
     const nome = document.createElement('h4');
     nome.classList.add('alimento-nome', 'card-title', 'mb-0', 'fw-bold');
     nome.textContent = alimento.nome
