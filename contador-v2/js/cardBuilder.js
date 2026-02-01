@@ -13,6 +13,10 @@ function criarCardAlimentoHeader (alimento) {
     img.alt = alimento.nome
     img.classList.add('alimento-img', 'card-img-top', 'rounded')
 
+    const graficoContainer = document.createElement('div');
+    graficoContainer.className = 'grafico-pizza-container';
+    graficoContainer.id = `grafico-pizza-${alimento.id}`;
+
     const nome = document.createElement('h4');
     nome.classList.add('alimento-nome', 'card-title', 'mb-0', 'fw-bold');
     nome.textContent = alimento.nome
