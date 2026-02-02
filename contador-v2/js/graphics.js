@@ -16,13 +16,35 @@ export function criarGraficoKcal() {
         title: {
             text: 'Consumo de kcal'
         },
+        subtitle: {
+            text: 'kcal por alimento'
+        },
         xAxis: {
-            categories: []
+            type: 'category',
+            title: {
+                text: 'Alimentos'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Quilocalorias (kcal)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.name}</b><br>',
+            pointFormat:
+                'Porções: <b>{point.porcoes}</b><br>' +
+                'Energia: <b>{point.y} kcal</b>'
         },
         series: [{
             name: 'kcal',
+            colorByPoint: true,
             data: []
-        }]
+        }],
+        credits: {
+            enabled: false
+        }
     });
 }
 
@@ -34,15 +56,14 @@ export function atualizarGraficoKcal(alimento, porcao) {
     const point = serie.data.find(p => p.id === alimento.nome);
 
     if (point) {
-        // Atualiza o ponto existente
-        point.update(kcal);
+        point.update({y: kcal, porcoes: porcao});
     } else {
-        // Cria novo ponto
         categorias.push(alimento.nome);
 
         serie.addPoint({
             id: alimento.nome,
-            y: kcal
+            y: kcal,
+            porcoes: porcao
         });
     }
 }
