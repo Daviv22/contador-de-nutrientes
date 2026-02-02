@@ -67,12 +67,19 @@
     </section>
 
     <!-- Seção 2: Gráficos -->
-    <section id="secao-graficos">
-        <h2>Gráficos</h2>
+    <section id="secao-graficos" class="container my-5">
+        <h2 class="text-center mb-5 fw-bold">Gráficos</h2>
 
         <section class="subsecao-graficos">
-            <h3>Valores Energéticos</h3>
-            <div id="grafico-colunas"></div>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Valores Energéticos</h3>
+                    <p class="text-muted mb-4">Consumo calórico estimado por alimento, com base na porção selecionada.</p>
+                    <div id="grafico-colunas"></div>
+                    <hr>
+                    <p class="fw-bold mb-0">Total: <span id="total-kcal">0</span> kcal</p>
+                </div>
+            </div>
         </section>
 
     </section>
