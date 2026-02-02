@@ -76,8 +76,16 @@ export function atualizarGraficoKcal(alimento, porcao) {
     const point = serie.data.find(p => p.id === alimento.nome);
 
     if (point) {
+        if (porcao === 0) {
+            point.remove();
+            return;
+        }
         point.update({y: kcal, porcoes: porcao});
     } else {
+
+        if (porcao === 0) {
+            return;
+        }
         categorias.push(alimento.nome);
 
         serie.addPoint({
