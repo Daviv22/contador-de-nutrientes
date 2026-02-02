@@ -49,48 +49,66 @@ export function criarGraficoPizza(alimento, containerId) {
         }
     ];
 
+    const altura = document.getElementById(containerId).offsetHeight || 250;
+
     Highcharts.chart(containerId, {
         chart: {
             type: 'pie',
-            height: 200,
-            backgroundColor: 'transparent',
-            margin: [0, 0, 0, 0],
-            spacing: [0, 0, 0, 0]
+            height: '100%',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            borderRadius: 8,
+            margin: [5, 5, 5, 5],
+            spacing: [5, 5, 5, 5]
         },
         title: {
-            text: null
+            text: 'Composição',
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                color: '#333'
+            },
+            margin: 5
         },
         tooltip: {
-            pointFormat: '<b>{point.y:.1f}g</b> ({point.percentage:.1f}%)',
+            pointFormat: '<b>{point.y:.1f}g</b><br>({point.percentage:.1f}%)',
             style: {
                 fontSize: '12px'
             }
         },
         plotOptions: {
             pie: {
-                allowPointSelect: false,
+                allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
                     format: '<b>{point.name}</b><br>{point.y:.1f}g',
                     style: {
-                        fontSize: '11px',
-                        textOutline: 'none',
-                        fontWeight: 'bold'
+                        fontSize: '10px',
+                        textOutline: '2px white',
+                        fontWeight: 'bold',
+                        color: '#333'
                     },
-                    distance: 10
+                    distance: 5
                 },
                 showInLegend: false,
-                size: '100%',
-                innerSize: '40%', // Donut chart (opcional)
-                borderWidth: 2,
-                borderColor: '#ffffff'
+                size: '50%',
+                innerSize: '50%',
+                borderWidth: 3,
+                borderColor: '#ffffff',
+                states: {
+                    hover: {
+                        brightness: 0.1
+                    }
+                }
             }
         },
         series: [{
             name: 'Nutrientes',
             colorByPoint: true,
-            data: dados
+            data: dados,
+            animation: {
+                duration: 600
+            }
         }],
         credits: {
             enabled: false

@@ -6,20 +6,38 @@ function criarCardAlimentoHeader (alimento) {
     header.classList.add('card-header', 'bg-light', 'text-center', 'p-3');
 
     const figure = document.createElement('figure');
-    figure.classList.add('alimento-figura', 'mb-3');
+    figure.classList.add('alimento-figura', 'mb-3', 'position-relative');
 
     const img = document.createElement('img')
     img.src = alimento.imagem
     img.alt = alimento.nome
     img.classList.add('alimento-img', 'card-img-top', 'rounded')
+    img.style.cssText = `
+        object-fit: cover;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1);
+    `;
 
     const graficoContainer = document.createElement('div');
     graficoContainer.classList.add('grafico-pizza-container');
     graficoContainer.id = `grafico-pizza-${alimento.id}`;
+    graficoContainer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    `;
 
     figure.addEventListener('mouseenter', () => {
         img.style.opacity = '0';
+        img.style.transform = 'scale(1.1)';
         graficoContainer.style.opacity = '1';
+        graficoContainer.style.transform = 'scale(1)';
         graficoContainer.style.pointerEvents = 'all';
 
         if (!graficoContainer.dataset.graficoCarregado) {
@@ -29,9 +47,10 @@ function criarCardAlimentoHeader (alimento) {
     });
 
     figure.addEventListener('mouseleave', () => {
-        // Esconder gráfico, mostrar imagem
         img.style.opacity = '1';
+        img.style.transform = 'scale(1)';
         graficoContainer.style.opacity = '0';
+        graficoContainer.style.transform = 'scale(0.8)';
         graficoContainer.style.pointerEvents = 'none';
     });
 
