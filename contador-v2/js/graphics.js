@@ -78,6 +78,7 @@ export function atualizarGraficoKcal(alimento, porcao) {
     if (point) {
         if (porcao === 0) {
             point.remove();
+            atualizarTotalKcal();
             return;
         }
         point.update({y: kcal, porcoes: porcao});
