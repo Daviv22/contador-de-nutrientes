@@ -28,9 +28,23 @@ export function criarGraficoKcal() {
 
 export function atualizarGraficoKcal(alimento, porcao) {
     const kcal = calcularKcal(alimento, porcao);
+    const serie = chartKcal.series[0];
+    const categorias = chartKcal.xAxis[0].categories;
 
-    chartKcal.xAxis[0].categories.push(alimento.nome)
-    chartKcal.series[0].addPoint(kcal)
+    const point = serie.data.find(p => p.id === alimento.nome);
+
+    if (point) {
+        // Atualiza o ponto existente
+        point.update(kcal);
+    } else {
+        // Cria novo ponto
+        categorias.push(alimento.nome);
+
+        serie.addPoint({
+            id: alimento.nome,
+            y: kcal
+        });
+    }
 }
 
 export function criarGraficoPizza(alimento, containerId) {
@@ -48,8 +62,6 @@ export function criarGraficoPizza(alimento, containerId) {
             y: alimento.nutrientes.gorduras,
         }
     ];
-
-    const altura = document.getElementById(containerId).offsetHeight || 250;
 
     Highcharts.chart(containerId, {
         chart: {
