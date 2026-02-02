@@ -56,6 +56,20 @@ function atualizarTotalKcal() {
     document.getElementById('total-kcal').textContent = total;
 }
 
+export function limparGraficoKcal() {
+    if (!chartKcal) return;
+
+    const serie = chartKcal.series[0];
+
+    while (serie.data.length) {
+        serie.data[0].remove(false);
+    }
+
+    chartKcal.redraw();
+    document.getElementById('total-kcal').textContent = 0;
+}
+
+
 export function atualizarGraficoKcal(alimento, porcao) {
     const kcal = calcularKcal(alimento, porcao);
     const serie = chartKcal.series[0];
