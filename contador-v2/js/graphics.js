@@ -48,6 +48,14 @@ export function criarGraficoKcal() {
     });
 }
 
+function atualizarTotalKcal() {
+    const serie = chartKcal.series[0];
+
+    const total = serie.data.reduce((soma, point) => soma + point.y, 0);
+
+    document.getElementById('total-kcal').textContent = total;
+}
+
 export function atualizarGraficoKcal(alimento, porcao) {
     const kcal = calcularKcal(alimento, porcao);
     const serie = chartKcal.series[0];
