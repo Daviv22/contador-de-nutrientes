@@ -44,6 +44,25 @@ section {
     }
 }
 
-.hero-full {
+.alimento-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.alimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header figure {
+    overflow: hidden;
+    border-radius: 0.375rem;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
 }
