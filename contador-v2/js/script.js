@@ -1,5 +1,5 @@
 import { criarCardAlimento } from "./cardBuilder.js";
-import { criarGraficoKcal } from "./graphics.js";
+import { criarGraficoKcal, limparGraficoKcal } from "./graphics.js";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
@@ -38,6 +38,9 @@ async function inicializar() {
     renderizarCards(alimentos);
 
     criarGraficoKcal();
+
+    document.getElementById('btn-limpar-grafico').addEventListener('click', limparGraficoKcal);
+
 }
 
 document.addEventListener('DOMContentLoaded', inicializar)
