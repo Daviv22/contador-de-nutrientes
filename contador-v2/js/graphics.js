@@ -74,6 +74,8 @@ export function atualizarGraficoKcal(alimento, porcao) {
             porcoes: porcao
         });
     }
+
+    atualizarTotalKcal();
 }
 
 export function criarGraficoPizza(alimento, containerId) {
