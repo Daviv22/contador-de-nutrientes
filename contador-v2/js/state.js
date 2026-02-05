@@ -56,3 +56,15 @@ export function adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes) {
     }
     return true;
 }
+
+export function removerItemRefeicao(numeroRefeicao, alimentoId) {
+    const refeicao = state.refeicoes[numeroRefeicao];
+    const index = refeicao.findIndex(item => item.alimentoId === alimentoId);
+
+    if (index !== -1) {
+        refeicao.splice(index, 1);
+        return true;
+    }
+
+    return false;
+}
