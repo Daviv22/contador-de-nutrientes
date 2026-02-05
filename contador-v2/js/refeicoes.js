@@ -1,4 +1,11 @@
-import {adicionarItemRefeicao, calcularTotaisDia, calcularTotaisRefeicao, getAlimentos, setMetas} from "./state.js";
+import {
+    adicionarItemRefeicao,
+    calcularTotaisDia,
+    calcularTotaisRefeicao,
+    getAlimentos,
+    limparRefeicao,
+    setMetas
+} from "./state.js";
 import {atualizarGraficoMetas} from "./graphics.js";
 
 export function pegarMetas() {
@@ -49,6 +56,13 @@ export function adicionarRefeicao() {
     adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes);
     atualizarTabelaRefeicoes();
 }
+
+function limparTabelaRefeicao(e) {
+    const numeroRefeicao = parseInt(e.target.dataset.refeicao);
+    limparRefeicao(numeroRefeicao);
+    atualizarTabelaRefeicoes();
+}
+
 
 function atualizarTabelaRefeicoes() {
     const tbody = document.getElementById('tbody-refeicoes');
