@@ -1,4 +1,5 @@
 let chartKcal;
+let chartMetas;
 
 function calcularKcal(alimento, porcao) {
     const carb = alimento.nutrientes.carboidratos * porcao;
