@@ -1,5 +1,6 @@
 import { criarCardAlimento } from "./cardBuilder.js";
 import { criarGraficoKcal, limparGraficoKcal } from "./graphics.js";
+import {setAlimentos} from "./state";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
@@ -35,6 +36,8 @@ function renderizarCards(listaAlimentos) {
 
 async function inicializar() {
     const alimentos = await carregarAlimentos();
+
+    setAlimentos(alimentos);
     renderizarCards(alimentos);
 
     criarGraficoKcal();
