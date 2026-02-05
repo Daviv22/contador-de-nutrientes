@@ -40,4 +40,19 @@ export function getMetas() {
 export function adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes) {
 
     const alimento = getAlimentoPorId(alimentoId)
+
+    if (!alimento) {
+        return false;
+    }
+
+    const refeicao = state.refeicoes[numeroRefeicao];
+
+    const itemExistente = refeicao.find( item => item.alimentoId === alimentoId);
+
+    if (itemExistente) {
+        itemExistente.porcoes = porcoes;
+    } else {
+        refeicao.push({alimentoId, porcoes: porcoes});
+    }
+    return true;
 }
