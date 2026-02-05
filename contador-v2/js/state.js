@@ -12,3 +12,11 @@ const state = {
         4: []
     }
 };
+
+export function setAlimentos(listaAlimentos) {
+    state.alimentos = listaAlimentos;
+}
+
+export function getAlimentos() {
+    return state.alimentos;
+}
