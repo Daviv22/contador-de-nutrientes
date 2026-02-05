@@ -223,3 +223,40 @@ export function atualizarGraficoMetas() {
         metas.gorduras
     ]);
 }
+
+export function criarGraficoRefeicao() {
+    chartRefeicao = Highcharts.chart('grafico-refeicoes', {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Consumo Total do Dia'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y:.1f}g</b> ({point.percentage:.1f}%)'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b><br>{point.y:.1f}g'
+                },
+                innerSize: '50%'
+            }
+        },
+        series: [{
+            name: 'Nutrientes',
+            colorByPoint: true,
+            data: [
+                { name: 'Carboidratos', y: 0, color: '#0d6efd' },
+                { name: 'Proteínas', y: 0, color: '#198754' },
+                { name: 'Gorduras', y: 0, color: '#ffc107' }
+            ]
+        }],
+        credits: {
+            enabled: false
+        }
+    });
+}
