@@ -20,3 +20,16 @@ export function setAlimentos(listaAlimentos) {
 export function getAlimentos() {
     return state.alimentos;
 }
+
+export function setMetas(metas) {
+    state.metas = {
+        carboidratos: metas.carboidratos,
+        proteinas: metas.proteinas,
+        gorduras: metas.gorduras,
+    }
+}
+
+export function getMetas() {
+    return state.metas;
+}
+
