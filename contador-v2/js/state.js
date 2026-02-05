@@ -96,3 +96,27 @@ export function calcularTotaisRefeicao(numeroRefeicao) {
 
     return totais;
 }
+
+export function calcularTotaisDia() {
+    const totais = {
+        carboidratos: 0,
+        proteinas: 0,
+        gorduras: 0,
+        kcal: 0
+    };
+
+    [1, 2, 3, 4].forEach(numero => {
+        const totaisRefeicao = calcularTotaisRefeicao(numero);
+        totais.carboidratos += totaisRefeicao.carboidratos;
+        totais.proteinas += totaisRefeicao.proteinas;
+        totais.gorduras += totaisRefeicao.gorduras;
+        totais.kcal += totaisRefeicao.kcal;
+    });
+
+    // Arredondar
+    Object.keys(totais).forEach(key => {
+        totais[key] = Math.round(totais[key] * 10) / 10;
+    });
+
+    return totais;
+}
