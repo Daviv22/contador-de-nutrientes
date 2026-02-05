@@ -1,6 +1,6 @@
 import { criarCardAlimento } from "./cardBuilder.js";
 import { criarGraficoKcal, limparGraficoKcal } from "./graphics.js";
-import {setAlimentos} from "./state";
+import {setAlimentos} from "./state.js";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
