@@ -68,3 +68,31 @@ export function removerItemRefeicao(numeroRefeicao, alimentoId) {
 
     return false;
 }
+
+export function calcularTotaisRefeicao(numeroRefeicao) {
+    const refeicao = state.refeicoes[numeroRefeicao];
+
+    const totais = {
+        carboidratos: 0,
+        proteinas: 0,
+        gorduras: 0,
+        kcal: 0
+    };
+
+    refeicao.forEach(item => {
+        const alimento = getAlimentoPorId(item.alimentoId);
+
+        if (!alimento) return;
+
+        const carb = alimento.nutrientes.carboidratos * item.porcoes;
+        const prot = alimento.nutrientes.proteinas * item.porcoes;
+        const gord = alimento.nutrientes.gorduras * item.porcoes;
+
+        totais.carboidratos += carb;
+        totais.proteinas += prot;
+        totais.gorduras += gord;
+        totais.kcal += (carb * 4) + (prot * 4) + (gord * 9);
+    });
+
+    return totais;
+}
