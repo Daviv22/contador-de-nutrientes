@@ -1,4 +1,4 @@
-import {adicionarItemRefeicao, getAlimentos, setMetas} from "./state.js";
+import {adicionarItemRefeicao, calcularTotaisDia, calcularTotaisRefeicao, getAlimentos, setMetas} from "./state.js";
 import {atualizarGraficoMetas} from "./graphics.js";
 
 export function pegarMetas() {
@@ -47,4 +47,28 @@ export function adicionarRefeicao() {
     if (!alimentoId || porcoes <= 0) return;
 
     adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes);
+    atualizarTabelaRefeicoes();
+}
+
+function atualizarTabelaRefeicoes() {
+    const tbody = document.getElementById('tbody-refeicoes');
+
+    [1, 2, 3, 4].forEach(numero => {
+        const row = tbody.querySelector(`tr[data-refeicao="${numero}"]`);
+        const totais = calcularTotaisRefeicao(numero);
+
+        row.querySelector('.carb').textContent = totais.carboidratos.toFixed(1);
+        row.querySelector('.prot').textContent = totais.proteinas.toFixed(1);
+        row.querySelector('.gord').textContent = totais.gorduras.toFixed(1);
+        row.querySelector('.kcal').textContent = totais.kcal.toFixed(0);
+    });
+
+    // Atualizar total
+    const totaisDia = calcularTotaisDia();
+    const rowTotal = tbody.querySelector('tr.table-primary');
+
+    rowTotal.querySelector('.carb strong').textContent = totaisDia.carboidratos.toFixed(1);
+    rowTotal.querySelector('.prot strong').textContent = totaisDia.proteinas.toFixed(1);
+    rowTotal.querySelector('.gord strong').textContent = totaisDia.gorduras.toFixed(1);
+    rowTotal.querySelector('.kcal strong').textContent = totaisDia.kcal.toFixed(0);
 }
