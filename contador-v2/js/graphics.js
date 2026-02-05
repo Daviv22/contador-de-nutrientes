@@ -1,4 +1,4 @@
-import {calcularTotaisDia, getMetas} from "./state.js";
+import {calcularTotaisDia, calcularVariacaoPercentual, getMetas} from "./state.js";
 
 let chartKcal;
 let chartMetas;
@@ -315,4 +315,25 @@ export function criarGraficoVariacao() {
             enabled: false
         }
     });
+}
+
+export function atualizarGraficoVariacao() {
+    const variacao = calcularVariacaoPercentual();
+
+    const dados = [
+        {
+            y: variacao.carboidratos,
+            color: variacao.carboidratos > 0 ? '#dc3545' : '#198754'
+        },
+        {
+            y: variacao.proteinas,
+            color: variacao.proteinas > 0 ? '#dc3545' : '#198754'
+        },
+        {
+            y: variacao.gorduras,
+            color: variacao.gorduras > 0 ? '#dc3545' : '#198754'
+        }
+    ];
+
+    chartVariacao.series[0].setData(dados);
 }

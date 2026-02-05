@@ -6,7 +6,7 @@ import {
     limparRefeicao,
     setMetas
 } from "./state.js";
-import {atualizarGraficoMetas, atualizarGraficoRefeicao} from "./graphics.js";
+import {atualizarGraficoMetas, atualizarGraficoRefeicao, atualizarGraficoVariacao} from "./graphics.js";
 
 export function pegarMetas() {
     const metas = {
@@ -17,6 +17,7 @@ export function pegarMetas() {
 
     setMetas(metas);
     atualizarGraficoMetas();
+    atualizarGraficoVariacao();
 }
 
 export function preencherSelectAlimentos() {
@@ -56,6 +57,7 @@ export function adicionarRefeicao() {
     adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes);
     atualizarTabelaRefeicoes();
     atualizarGraficoRefeicao();
+    atualizarGraficoVariacao();
 }
 
 export function limparTabelaRefeicao(e) {
@@ -63,6 +65,7 @@ export function limparTabelaRefeicao(e) {
     limparRefeicao(numeroRefeicao);
     atualizarTabelaRefeicoes();
     atualizarGraficoRefeicao();
+    atualizarGraficoVariacao();
 }
 
 
