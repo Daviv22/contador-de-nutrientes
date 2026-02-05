@@ -115,3 +115,25 @@ export function calcularTotaisDia() {
 
     return totais;
 }
+
+export function calcularVariacaoPercentual() {
+    const metas = getMetas();
+    const totais = calcularTotaisDia();
+
+    const variacao = {
+        carboidratos: 0,
+        proteinas: 0,
+        gorduras: 0
+    };
+
+    Object.keys(variacao).forEach(nutriente => {
+        if (metas[nutriente] === 0) {
+            variacao[nutriente] = 0;
+        } else {
+            variacao[nutriente] = ((totais[nutriente] - metas[nutriente]) / metas[nutriente]) * 100;
+            variacao[nutriente] = Math.round(variacao[nutriente] * 10) / 10;
+        }
+    });
+
+    return variacao;
+}
