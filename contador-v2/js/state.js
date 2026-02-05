@@ -137,3 +137,12 @@ export function calcularVariacaoPercentual() {
 
     return variacao;
 }
+
+export function limparRefeicoes() {
+    state.refeicoes = {
+        1: [],
+        2: [],
+        3: [],
+        4: []
+    };
+}
