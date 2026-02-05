@@ -1,5 +1,5 @@
 import { criarCardAlimento } from "./cardBuilder.js";
-import { criarGraficoKcal, limparGraficoKcal } from "./graphics.js";
+import {criarGraficoKcal, criarGraficoMetas, limparGraficoKcal} from "./graphics.js";
 import {setAlimentos} from "./state.js";
 import {pegarMetas} from "./refeicoes.js";
 
@@ -42,6 +42,7 @@ async function inicializar() {
     renderizarCards(alimentos);
 
     criarGraficoKcal();
+    criarGraficoMetas();
 
     document.getElementById('btn-limpar-grafico').addEventListener('click', limparGraficoKcal);
     document.getElementById('form-metas').addEventListener('click', pegarMetas);
