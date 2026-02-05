@@ -1,5 +1,5 @@
 import { criarCardAlimento } from "./cardBuilder.js";
-import {criarGraficoKcal, criarGraficoMetas, limparGraficoKcal} from "./graphics.js";
+import {criarGraficoKcal, criarGraficoMetas, criarGraficoRefeicao, limparGraficoKcal} from "./graphics.js";
 import {setAlimentos} from "./state.js";
 import {adicionarRefeicao, limparTabelaRefeicao, pegarMetas, preencherSelectAlimentos} from "./refeicoes.js";
 
@@ -53,6 +53,7 @@ async function inicializar() {
         btn.addEventListener('click', limparTabelaRefeicao);
     });
 
+    criarGraficoRefeicao();
 }
 
 document.addEventListener('DOMContentLoaded', inicializar)
