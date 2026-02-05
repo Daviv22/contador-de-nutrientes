@@ -45,7 +45,7 @@ async function inicializar() {
     criarGraficoMetas();
 
     document.getElementById('btn-limpar-grafico').addEventListener('click', limparGraficoKcal);
-    document.getElementById('form-metas').addEventListener('click', pegarMetas);
+    document.getElementById('btn-metas').addEventListener('click', pegarMetas);
 
 }
 
