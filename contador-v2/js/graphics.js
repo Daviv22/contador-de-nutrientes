@@ -180,3 +180,35 @@ export function criarGraficoPizza(alimento, containerId) {
         }
     });
 }
+
+export function criarGraficoMetas() {
+    chartMetas = Highcharts.chart('grafico-metas', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Suas Metas Diárias'
+        },
+        xAxis: {
+            categories: ['Carboidratos', 'Proteínas', 'Gorduras']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Gramas (g)'
+            }
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y:.1f}g</b>'
+        },
+        series: [{
+            name: 'Meta',
+            data: [0, 0, 0],
+            color: '#0d6efd'
+        }],
+        credits: {
+            enabled: false
+        }
+    });
+}
+
