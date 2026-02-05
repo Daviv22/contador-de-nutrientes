@@ -57,7 +57,7 @@ export function adicionarRefeicao() {
     atualizarTabelaRefeicoes();
 }
 
-function limparTabelaRefeicao(e) {
+export function limparTabelaRefeicao(e) {
     const numeroRefeicao = parseInt(e.target.dataset.refeicao);
     limparRefeicao(numeroRefeicao);
     atualizarTabelaRefeicoes();
