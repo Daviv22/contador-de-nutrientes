@@ -2,6 +2,7 @@ import {getMetas} from "./state.js";
 
 let chartKcal;
 let chartMetas;
+let chartRefeicao;
 
 function calcularKcal(alimento, porcao) {
     const carb = alimento.nutrientes.carboidratos * porcao;
