@@ -1,7 +1,7 @@
 import { criarCardAlimento } from "./cardBuilder.js";
 import {criarGraficoKcal, criarGraficoMetas, limparGraficoKcal} from "./graphics.js";
 import {setAlimentos} from "./state.js";
-import {pegarMetas} from "./refeicoes.js";
+import {pegarMetas, preencherSelectAlimentos} from "./refeicoes.js";
 
 async function carregarAlimentos() {
     const response = await fetch('./alimentos.json');
@@ -42,7 +42,9 @@ async function inicializar() {
     renderizarCards(alimentos);
 
     criarGraficoKcal();
+
     criarGraficoMetas();
+    preencherSelectAlimentos();
 
     document.getElementById('btn-limpar-grafico').addEventListener('click', limparGraficoKcal);
     document.getElementById('btn-metas').addEventListener('click', pegarMetas);
