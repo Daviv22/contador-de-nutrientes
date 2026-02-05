@@ -113,10 +113,5 @@ export function calcularTotaisDia() {
         totais.kcal += totaisRefeicao.kcal;
     });
 
-    // Arredondar
-    Object.keys(totais).forEach(key => {
-        totais[key] = Math.round(totais[key] * 10) / 10;
-    });
-
     return totais;
 }
