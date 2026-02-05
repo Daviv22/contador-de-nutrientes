@@ -1,4 +1,4 @@
-import {getMetas} from "./state.js";
+import {calcularTotaisDia, getMetas} from "./state.js";
 
 let chartKcal;
 let chartMetas;
@@ -259,4 +259,14 @@ export function criarGraficoRefeicao() {
             enabled: false
         }
     });
+}
+
+export function atualizarGraficoRefeicao() {
+    const totais = calcularTotaisDia();
+
+    chartRefeicao.series[0].setData([
+        { name: 'Carboidratos', y: totais.carboidratos, color: '#0d6efd' },
+        { name: 'Proteínas', y: totais.proteinas, color: '#198754' },
+        { name: 'Gorduras', y: totais.gorduras, color: '#ffc107' }
+    ]);
 }

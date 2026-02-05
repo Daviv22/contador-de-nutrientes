@@ -6,7 +6,7 @@ import {
     limparRefeicao,
     setMetas
 } from "./state.js";
-import {atualizarGraficoMetas} from "./graphics.js";
+import {atualizarGraficoMetas, atualizarGraficoRefeicao} from "./graphics.js";
 
 export function pegarMetas() {
     const metas = {
@@ -55,12 +55,14 @@ export function adicionarRefeicao() {
 
     adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes);
     atualizarTabelaRefeicoes();
+    atualizarGraficoRefeicao();
 }
 
 export function limparTabelaRefeicao(e) {
     const numeroRefeicao = parseInt(e.target.dataset.refeicao);
     limparRefeicao(numeroRefeicao);
     atualizarTabelaRefeicoes();
+    atualizarGraficoRefeicao();
 }
 
 
