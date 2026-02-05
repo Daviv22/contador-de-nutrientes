@@ -271,3 +271,48 @@ export function atualizarGraficoRefeicao() {
         { name: 'Gorduras', y: totais.gorduras, color: '#ffc107' }
     ]);
 }
+
+export function criarGraficoVariacao() {
+    chartVariacao = Highcharts.chart('grafico-variacao', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Variação: Meta vs Consumo'
+        },
+        xAxis: {
+            categories: ['Carboidratos', 'Proteínas', 'Gorduras']
+        },
+        yAxis: {
+            title: {
+                text: 'Variação (%)'
+            },
+            plotLines: [{
+                value: 0,
+                color: '#666',
+                width: 2,
+                zIndex: 4
+            }]
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y:.1f}%</b>'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+        series: [{
+            name: 'Variação',
+            data: [0, 0, 0],
+            colorByPoint: false,
+            color: '#0d6efd'
+        }],
+        credits: {
+            enabled: false
+        }
+    });
+}

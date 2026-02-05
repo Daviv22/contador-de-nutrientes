@@ -1,5 +1,11 @@
 import { criarCardAlimento } from "./cardBuilder.js";
-import {criarGraficoKcal, criarGraficoMetas, criarGraficoRefeicao, limparGraficoKcal} from "./graphics.js";
+import {
+    criarGraficoKcal,
+    criarGraficoMetas,
+    criarGraficoRefeicao,
+    criarGraficoVariacao,
+    limparGraficoKcal
+} from "./graphics.js";
 import {setAlimentos} from "./state.js";
 import {adicionarRefeicao, limparTabelaRefeicao, pegarMetas, preencherSelectAlimentos} from "./refeicoes.js";
 
@@ -54,6 +60,7 @@ async function inicializar() {
     });
 
     criarGraficoRefeicao();
+    criarGraficoVariacao();
 }
 
 document.addEventListener('DOMContentLoaded', inicializar)
