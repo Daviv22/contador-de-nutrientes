@@ -48,7 +48,7 @@ async function inicializar() {
 
     document.getElementById('btn-limpar-grafico').addEventListener('click', limparGraficoKcal);
     document.getElementById('btn-metas').addEventListener('click', pegarMetas);
-    document.getElementById('form-adicionar-refeicao').addEventListener('submit', adicionarRefeicao);
+    document.getElementById('btn-refeicao').addEventListener('click', adicionarRefeicao);
 
 }
 
