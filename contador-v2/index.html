@@ -257,38 +257,45 @@
                     </div>
                 </div>
 
-                <form id="form-adicionar-refeicao">
-                    <div>
-                        <label>Refeição</label>
-                        <div>
-                            <input type="radio" name="refeicao" id="ref1" value="1" checked>
-                            <label for="ref1">1ª</label>
+                <div class="col-lg-5">
+                    <div class="card shadow-sm sticky-top" style="top: 120px;">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Adicionar Alimento</h4>
+                            <form id="form-adicionar-refeicao">
+                                <div class="mb-3">
+                                    <label class="form-label">Refeição</label>
+                                    <div class="btn-group d-flex" role="group">
+                                        <input type="radio" class="btn-check" name="refeicao" id="ref1" value="1" checked>
+                                        <label class="btn btn-outline-primary" for="ref1">1ª</label>
 
-                            <input type="radio" name="refeicao" id="ref2" value="2">
-                            <label for="ref2">2ª</label>
+                                        <input type="radio" class="btn-check" name="refeicao" id="ref2" value="2">
+                                        <label class="btn btn-outline-primary" for="ref2">2ª</label>
 
-                            <input type="radio" name="refeicao" id="ref3" value="3">
-                            <label for="ref3">3ª</label>
+                                        <input type="radio" class="btn-check" name="refeicao" id="ref3" value="3">
+                                        <label class="btn btn-outline-primary" for="ref3">3ª</label>
 
-                            <input type="radio" name="refeicao" id="ref4" value="4">
-                            <label for="ref4">4ª</label>
+                                        <input type="radio" class="btn-check" name="refeicao" id="ref4" value="4">
+                                        <label class="btn btn-outline-primary" for="ref4">4ª</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="select-alimento" class="form-label">Alimento</label>
+                                    <select id="select-alimento" class="form-select" required>
+                                        <option value="">Selecione um alimento</option>
+                                    </select>
+                                </div>
+
+                                <div  class="mb-3">
+                                    <label for="input-porcoes" class="form-label">Porções</label>
+                                    <input type="number" class="form-control" id="input-porcoes" min="0" step="1" required>
+                                </div>
+
+                                <button type="button" class="btn btn-success w-100" id="btn-refeicao">Adicionar à Refeição</button>
+                            </form>
                         </div>
                     </div>
-
-                    <div>
-                        <label for="select-alimento">Alimento</label>
-                        <select id="select-alimento" required>
-                            <option value="">Selecione um alimento</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="input-porcoes" >Porções</label>
-                        <input type="number" id="input-porcoes" min="0" step="1" required>
-                    </div>
-
-                    <button type="button" id="btn-refeicao">Adicionar à Refeição</button>
-                </form>
+                </div>
             </div>
         </section>
 
