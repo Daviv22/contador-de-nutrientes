@@ -172,77 +172,86 @@
 
         <section class="subsecao-refeicoes-dia mb-5">
             <h3 class="mb-4">Refeições do Dia</h3>
-            <div class="container-refeicoes">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Refeição</th>
-                        <th>Carb. (g)</th>
-                        <th>Prot. (g)</th>
-                        <th>Gord. (g)</th>
-                        <th>Kcal</th>
-                        <th>Ações</th>
-                    </tr>
-                    </thead>
+            <div class="container-refeicoes row g-4">
+                <div class="col-lg-7">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                    <tr>
+                                        <th>Refeição</th>
+                                        <th>Carb. (g)</th>
+                                        <th>Prot. (g)</th>
+                                        <th>Gord. (g)</th>
+                                        <th>Kcal</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                    </thead>
 
-                    <tbody id="tbody-refeicoes">
-                        <tr data-refeicao="1">
-                            <td>1ª Refeição</td>
-                            <td class="carb">0</td>
-                            <td class="prot">0</td>
-                            <td class="gord">0</td>
-                            <td class="kcal">0</td>
-                            <td>
-                                <button class="btn-limpar" data-refeicao="1">
-                                    Limpar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr data-refeicao="2">
-                            <td>2ª Refeição</td>
-                            <td class="carb">0</td>
-                            <td class="prot">0</td>
-                            <td class="gord">0</td>
-                            <td class="kcal">0</td>
-                            <td>
-                                <button class="btn-limpar" data-refeicao="2">
-                                    Limpar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr data-refeicao="3">
-                            <td>3ª Refeição</td>
-                            <td class="carb">0</td>
-                            <td class="prot">0</td>
-                            <td class="gord">0</td>
-                            <td class="kcal">0</td>
-                            <td>
-                                <button class="btn-limpar" data-refeicao="3">
-                                    Limpar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr data-refeicao="4">
-                            <td>4ª Refeição</td>
-                            <td class="carb">0</td>
-                            <td class="prot">0</td>
-                            <td class="gord">0</td>
-                            <td class="kcal">0</td>
-                            <td>
-                                <button class="btn-limpar" data-refeicao="4">
-                                    Limpar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>TOTAL</td>
-                            <td class="carb"><strong>0</strong></td>
-                            <td class="prot"><strong>0</strong></td>
-                            <td class="gord"><strong>0</strong></td>
-                            <td class="kcal"><strong>0</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
+                                    <tbody id="tbody-refeicoes">
+                                    <tr data-refeicao="1">
+                                        <td><strong>1ª Refeição</strong></td>
+                                        <td class="carb">0</td>
+                                        <td class="prot">0</td>
+                                        <td class="gord">0</td>
+                                        <td class="kcal">0</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger btn-limpar" data-refeicao="1">
+                                                Limpar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr data-refeicao="2">
+                                        <td><strong>2ª Refeição</strong></td>
+                                        <td class="carb">0</td>
+                                        <td class="prot">0</td>
+                                        <td class="gord">0</td>
+                                        <td class="kcal">0</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger btn-limpar" data-refeicao="2">
+                                                Limpar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr data-refeicao="3">
+                                        <td><strong>3ª Refeição</strong></td>
+                                        <td class="carb">0</td>
+                                        <td class="prot">0</td>
+                                        <td class="gord">0</td>
+                                        <td class="kcal">0</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger btn-limpar" data-refeicao="3">
+                                                Limpar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr data-refeicao="4">
+                                        <td><strong>4ª Refeição</strong></td>
+                                        <td class="carb">0</td>
+                                        <td class="prot">0</td>
+                                        <td class="gord">0</td>
+                                        <td class="kcal">0</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger btn-limpar" data-refeicao="4">
+                                                Limpar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td><strong>TOTAL</strong></td>
+                                        <td class="carb"><strong>0</strong></td>
+                                        <td class="prot"><strong>0</strong></td>
+                                        <td class="gord"><strong>0</strong></td>
+                                        <td class="kcal"><strong>0</strong></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div id="grafico-refeicoes"></div>
 
