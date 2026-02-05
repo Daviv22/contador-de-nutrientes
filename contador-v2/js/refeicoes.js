@@ -16,7 +16,12 @@ export function preencherSelectAlimentos() {
     const alimentos = getAlimentos();
     const select = document.getElementById('select-alimento')
 
-    const categorias = [...new Set(alimentos.map(a => a.categoria))];
+    const categorias = {
+        frutas: 'Frutas',
+        graos: 'Grãos',
+        animais: 'Animais',
+        tuberculos: 'Tubérculos'
+    };
 
     Object.keys(categorias).forEach(categoria => {
         const optgroup = document.createElement('optgroup');
