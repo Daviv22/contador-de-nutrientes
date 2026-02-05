@@ -1,3 +1,5 @@
+import {getMetas} from "./state.js";
+
 let chartKcal;
 let chartMetas;
 
@@ -67,7 +69,6 @@ export function limparGraficoKcal() {
     chartKcal.redraw();
     document.getElementById('total-kcal').textContent = 0;
 }
-
 
 export function atualizarGraficoKcal(alimento, porcao) {
     const kcal = calcularKcal(alimento, porcao);
@@ -212,3 +213,12 @@ export function criarGraficoMetas() {
     });
 }
 
+export function atualizarGraficoMetas() {
+    const metas = getMetas();
+
+    chartMetas.series[0].setData([
+        metas.carboidratos,
+        metas.proteinas,
+        metas.gorduras
+    ]);
+}
