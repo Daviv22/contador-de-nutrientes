@@ -1,4 +1,4 @@
-import {getAlimentos, setMetas} from "./state.js";
+import {adicionarItemRefeicao, getAlimentos, setMetas} from "./state.js";
 import {atualizarGraficoMetas} from "./graphics.js";
 
 export function pegarMetas() {
@@ -36,4 +36,15 @@ export function preencherSelectAlimentos() {
 
         select.appendChild(optgroup);
     });
+}
+
+export function adicionarRefeicao() {
+
+    const numeroRefeicao = parseInt(document.querySelector('input[name="refeicao"]:checked').value);
+    const alimentoId = document.getElementById('select-alimento').value;
+    const porcoes = parseFloat(document.getElementById('input-porcoes').value);
+
+    if (!alimentoId || porcoes <= 0) return;
+
+    adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes);
 }
