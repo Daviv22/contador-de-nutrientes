@@ -21,6 +21,10 @@ export function getAlimentos() {
     return state.alimentos;
 }
 
+export function getAlimentoPorId(id) {
+    return state.alimentos.find(alimento => alimento.id === id);
+}
+
 export function setMetas(metas) {
     state.metas = {
         carboidratos: metas.carboidratos,
@@ -33,3 +37,7 @@ export function getMetas() {
     return state.metas;
 }
 
+export function adicionarItemRefeicao(numeroRefeicao, alimentoId, porcoes) {
+
+    const alimento = getAlimentoPorId(alimentoId)
+}
