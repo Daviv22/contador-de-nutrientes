@@ -8,4 +8,6 @@ export function pegarMetas() {
         gorduras: Number(document.getElementById('meta-gord').value)
     }
 
+    setMetas(metas);
+    atualizarGraficoMetas();
 }
