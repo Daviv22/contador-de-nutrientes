@@ -146,3 +146,7 @@ export function limparRefeicoes() {
         4: []
     };
 }
+
+export function limparRefeicao(numeroRefeicao) {
+    state.refeicoes[numeroRefeicao] = [];
+}
